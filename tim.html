@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Overfootball - Tim</title>
+    <meta name="description" content="Overcoding"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <meta name="theme-color" content="#283593"/>
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/apercu.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="img">
+      <div>
+          <img src="images/Overfootball.png" alt="Logo" class="header-logo">
+          <p>Get ready for the next level of football</p>
+      </div>
+      <img src="images/header-img2.png" alt="Header Image">
+    </div>
+  </header>
+  <!-- Navigasi -->
+  <nav class="white nav-center" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="sidenav-trigger black-text" data-target="nav-mobile"><i class="material-icons">menu</i></a>
+      
+      <ul class="topnav hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+
+  <!-- Content -->
+  <div class="container body-content" id="body-content">
+    <h3 class="header center text-bold">English Premier Leage <span class="purple-text text-darken-5 text-regular">Teams</span></h3>
+    <div class="row">
+      <div class="col s12 m12 p-0">
+        <table class="highlight" id="epl-standings">
+          <thead>
+            <tr>
+                <th>#</th>
+                <th>Club</th>
+                <th></th>
+                <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="listTeams">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer indigo darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <img src="images/Overfootball.png" alt="Logo" class="header-logo">
+          
+          <p class="grey-text text-lighten-4 mb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a arcu libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus aliquet rutrum. Vivamus vel rutrum massa. Nulla nisi urna, rhoncus in mauris quis, tempus pretium dui. Donec lobortis elementum dolor non pretium. Nullam vitae auctor ipsum, quis lacinia dui.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul class="footer-links">
+            <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="./pages/klasemen.html">Klasemen</a></li>
+            <li><a class="grey-text text-lighten-3" href="./pages/tim.html">Informasi Tim</a></li>
+            <li><a class="grey-text text-lighten-3" href="./pages/jadwal.html">Jadwal Tanding</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright indigo darken-4">
+      <div class="container center">
+      <p class="valign center"> © 2020 Samodra</p>
+      </div>
+    </div>
+  </footer>
+      
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/idb.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/serviceworker.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      getTeams();
+    });
+  </script>
+</body>
+</html>
